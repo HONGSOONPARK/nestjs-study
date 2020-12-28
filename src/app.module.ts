@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MoviesController } from './movies/movies.controller';
+import { MoviesService } from './movies/movies.service';
 
 // 데코레이터 
 // decorateor
@@ -7,6 +8,6 @@ import { MoviesController } from './movies/movies.controller';
 @Module({
   imports: [],
   controllers: [MoviesController],  // Url 가져오기, 함수실행 (express 의 라우터 역할)
-  providers: [], 
+  providers: [MoviesService], 
 })
 export class AppModule {}
